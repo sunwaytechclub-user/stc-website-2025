@@ -71,7 +71,7 @@ export default function PastEvent() {
         transition={{ ease: "easeInOut", duration: 0.75 }}
       >
         <p className="text-lg">
-        At STC, we bridge the gap between tech education, the tech industry, and technopreneurship by hosting events like talks, career talks, company visits, hands-on workshops, and tech series. These activities are designed to help you learn new skills, gain industry insights, and connect with like-minded individuals. Whether you're a beginner or an aspiring technopreneur, STC is your platform to grow, innovate, and thrive in the tech world!
+        At STC, we bridge the gap between tech education, the tech industry, and technopreneurship by hosting events like talks, career talks, company visits, hands-on workshops, and tech series. These activities are designed to help you learn new skills, gain industry insights, and connect with like-minded individuals. Whether you&apos;re a beginner or an aspiring technopreneur, STC is your platform to grow, innovate, and thrive in the tech world!
         </p>
       </motion.div>
       <div className="mt-12">

@@ -51,7 +51,7 @@ const Hero = () => {
       className="relative w-full"
     >
       <CenterImage />
-      <ParallaxTexts />
+
       <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-zinc-950" />
     </div>
   );
@@ -92,80 +92,3 @@ const CenterImage = () => {
   );
 };
 
-
-interface ParallaxTextProps {
-  text: string;
-  start: number;
-  end: number;
-  className?: string;
-  colors?: string[]; // Add this new prop
-}
-
-const ParallaxTexts = () => {
-  return (
-    <div className="mx-auto w-full px-4 pt-[100px] md:pt-[200px]">
-      <ParallaxText
-        text="#Industry"
-        start={-200}
-        end={200}
-        className="w-2/3 md:w-1/3 text-4xl md:text-6xl font-bold text-white ml-[5%] md:ml-[10%]"
-        colors={["#40ffaa", "#4079ff", "#40ffaa"]}
-      />
-      <ParallaxText
-        text="<Code/>"
-        start={200}
-        end={-250}
-        className="w-full md:w-1/2 text-5xl md:text-7xl font-bold text-white ml-[20%] md:ml-[60%]"
-        colors={[" #12c2e9, #c471ed, #f64f59"]}
-      />
-      <ParallaxText
-        text="#Tech"
-        start={350}
-        end={-150}
-        className="w-2/3 md:w-1/3 text-3xl md:text-5xl font-bold text-white ml-[10%] md:ml-[55%]"
-        colors={["#f7ff00", "#db36a4", "#f7ff00"]}
-      />
-      <ParallaxText
-        text="#Innovation"
-        start={-300}
-        end={200}
-        className="w-full md:w-1/2 text-4xl md:text-6xl font-bold text-white ml-[30%] md:ml-[60%]"
-        colors={["#FF0080", "#FF8C00", "#FF0080"]}
-      />
-      <ParallaxText
-        text="#Education"
-        start={250}
-        end={-200}
-        className="w-2/3 md:w-1/3 text-3xl md:text-5xl font-bold text-white ml-[15%] md:ml-[25%]"
-        colors={["#4facfe", "#00f2fe", "#4facfe"]}
-      />
-    </div>
-  );
-};
-
-const ParallaxText = ({ className, text, start, end, colors = ["#ffaa40", "#9c40ff", "#ffaa40"] }: ParallaxTextProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: [`${start}px end`, `end ${end * -1}px`],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0.75, 1], [1, 0.85]);
-
-  const y = useTransform(scrollYProgress, [0, 1], [start, end]);
-  const transform = useMotionTemplate`translateY(${y}px) scale(${scale})`;
-
-  return (
-    <motion.div
-      className={className}
-      ref={ref}
-      style={{ transform, opacity }}
-    >
-      <GradientText colors={colors} animationSpeed={8}>
-        {text}
-      </GradientText>
-    </motion.div>
-  );
-};

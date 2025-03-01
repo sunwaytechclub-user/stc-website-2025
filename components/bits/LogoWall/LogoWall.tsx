@@ -44,6 +44,9 @@ const LogoWall: FC<LogoWallProps> = ({
     .filter(Boolean)
     .join(" ");
 
+    const offsetIndex = 4; // Since you have 12 logos, shifting by 4 ensures even spacing
+    const offsetItems = [...items.slice(offsetIndex), ...items.slice(0, offsetIndex)];
+    
   return (
     <article
       className={wrapperClass}
@@ -80,12 +83,12 @@ const LogoWall: FC<LogoWallProps> = ({
         onMouseLeave={() => pauseOnHover && setIsPaused(false)}
       >
         <div className="marquee__group">
-          {items.map((item, idx) => (
+          {offsetItems.map((item, idx) => (
             <img key={`rev-${idx}`} src={item.imgUrl} alt={item.altText} />
           ))}
         </div>
         <div className="marquee__group" aria-hidden="true">
-          {items.map((item, idx) => (
+          {offsetItems.map((item, idx) => (
             <img key={`dup2-${idx}`} src={item.imgUrl} alt={item.altText} />
           ))}
         </div>

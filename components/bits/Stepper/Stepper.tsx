@@ -82,10 +82,7 @@ export default function Stepper({
     }
   };
 
-  const handleComplete = () => {
-    setDirection(1);
-    updateStep(totalSteps + 1);
-  };
+  
 
   return (
     <div
@@ -163,14 +160,16 @@ export default function Stepper({
                   {backButtonText}
                 </button>
               )}
-              <button
-                onClick={isLastStep ? handleComplete : handleNext}
-                className="rounded-full bg-[#00d8ff] py-2 px-4 font-medium text-black transition
+              {!isLastStep && (
+                <button
+                  onClick={handleNext}
+                  className="rounded-full bg-[#00d8ff] py-2 px-4 font-medium text-black transition
     shadow-[0_0_10px_#00d8ff] hover:bg-[#008fcc] hover:shadow-[0_0_15px_#008fcc]"
-                {...nextButtonProps}
-              >
-                {isLastStep ? "Complete" : nextButtonText}
-              </button>
+                  {...nextButtonProps}
+                >
+                  {nextButtonText}
+                </button>
+              )}
             </div>
           </div>
         )}
@@ -353,9 +352,7 @@ function StepConnector({ isComplete }: StepConnectorProps) {
   );
 }
 
-interface CheckIconProps extends React.SVGProps<SVGSVGElement> {}
-
-function CheckIcon(props: CheckIconProps) {
+function CheckIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

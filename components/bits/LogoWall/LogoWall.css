@@ -68,8 +68,7 @@
 }
 
 .marquee--reverse .marquee__group {
-  animation-direction: reverse;
-  animation-delay: -3s;
+  animation-delay: -4s;
 }
 
 .marquee__group {

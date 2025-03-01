@@ -1,6 +1,6 @@
 import BlurText from "@/src/blocks/TextAnimations/BlurText/BlurText";
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
+import ShinyText from "@/src/blocks/TextAnimations/ShinyText/ShinyText";
 import LogoWall from "./bits/LogoWall/LogoWall";
 
 
@@ -16,20 +16,42 @@ const logoImgs = [
   { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/futurelab_logo.png", altText: "React Bits Logo" },
   { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/aws_logo.png", altText: "React Bits Logo" },
   { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/gdgkl_logo.png", altText: "React Bits Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/Sas_logo.png", altText: "React Bits Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/Mdec_logo.png", altText: "React Bits Logo" },
 ];
 
 export default function Join() {
   return (
     <section id="join" className="mx-auto max-w-5xl px-4 py-48 text-white">
-      <div className="place-self-center">
-        <BlurText
-          text="Collab With Us?"
+      <BlurText
+          text="Let's Collab"
           delay={150}
           animateBy="words"
           direction="top"
-          className="text-7xl mb-8"
+          className=""
         />
-
+        <motion.h1
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, margin: "-100px" }}
+        transition={{ ease: "easeInOut", duration: 0.75, delay: 0.2 }}
+        className="my-5 text-4xl font-black uppercase text-zinc-50"
+      >
+        Parner with us to drive innovation!
+      </motion.h1>
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, margin: "-100px" }}
+        transition={{ ease: "easeInOut", duration: 0.75, delay: 0.3 }}
+      >
+        <p className="text-lg">
+        Are you an organization, startup, or fellow tech enthusiast looking 
+        to collaborate? We&apos;re open to partnerships for workshops, hackathons, mentorship programs, and more! 
+        Let&apos;s work together to create impactful experiences. Reach out to us at <span className="font-bold">sunwaytechclub@gmail.com</span>, and let&apos;s build something great together!</p>
+      </motion.div>
+      <div className="justify-self-center mt-10">
+      <ShinyText text="Past Collaborators" disabled={false} speed={5} className='text-5xl text-white' />
       </div>
       <div style={{height: '600px', width: '100%', position: 'relative'}}>
         <LogoWall
