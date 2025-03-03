@@ -21,8 +21,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "STC Website",
-  description: "Students' Technical Club of SUTD",
+  title: "STC Official Page",
+  description: "Sunway Tech Club Official Page",
+  icons:{
+    icon:"favicon.png"
+  }
 };
 
 export const viewport = {
