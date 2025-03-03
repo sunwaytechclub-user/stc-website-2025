@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -29,6 +29,7 @@
     "react": "18",
     "react-dom": "18",
     "react-icons": "^5.4.0",
+    "stc-web": ".",
     "swiper": "^11.2.3",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7"
