@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import Image from "next/image";
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -108,7 +109,7 @@ export default function PastEvent() {
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <img
+              <Image
                 src={img.image}
                 alt={`Slide ${index + 1}`}
                 className="object-cover w-full h-full"

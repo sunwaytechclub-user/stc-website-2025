@@ -1,9 +1,6 @@
-import BlurText from "@/src/blocks/TextAnimations/BlurText/BlurText";
 import { motion } from "framer-motion";
 import ShinyText from "@/src/blocks/TextAnimations/ShinyText/ShinyText";
 import LogoWall from "./bits/LogoWall/LogoWall";
-
-
 
 const logoImgs = [
   { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/moneylion-logo.png", altText: "React Bits Logo" },
