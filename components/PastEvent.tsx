@@ -53,15 +53,15 @@ const images = [
 export default function PastEvent() {
   return (
     <section
-      id="schedule"
+      id="pastevent"
       className="mx-auto max-w-5xl px-4 py-48 text-white"
     >
-      <p>What</p>
+      <p className="heading-style-1">What We&apos;ve Done</p>
       <motion.h1
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
-        className="my-5 text-4xl font-black uppercase text-zinc-50"
+        className="heading-style-2"
       >
         Past Event
       </motion.h1>
@@ -70,8 +70,9 @@ export default function PastEvent() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
       >
-        <p className="text-lg">
-        At STC, we bridge the gap between tech education, the tech industry, and technopreneurship by hosting events like talks, career talks, company visits, hands-on workshops, and tech series. These activities are designed to help you learn new skills, gain industry insights, and connect with like-minded individuals. Whether you&apos;re a beginner or an aspiring technopreneur, STC is your platform to grow, innovate, and thrive in the tech world!
+        <p className="text-sm sm:text-base md:text-lg">
+        Our past events have connected students with industry leaders, fostered innovation, and built a strong tech community.
+        Swipe through our highlights and be part of our future events!
         </p>
       </motion.div>
       <div className="mt-12">

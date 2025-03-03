@@ -27,7 +27,7 @@ export default function Event() {
       colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
       animationSpeed={3}
       showBorder={true}
-      className="p-4 text-5xl"
+      className="p-2 md:p-4 text-2xl md:text-5xl"
       >
       Career Talk
       </GradientText> },
@@ -36,7 +36,7 @@ export default function Event() {
       colors={["#ff1b6b", "#45caff", "#ff1b6b", "#45caff", "#ff1b6b"]}
       animationSpeed={3}
       showBorder={true}
-      className="p-4 text-5xl"
+      className="p-2 md:p-4 text-2xl md:text-5xl"
       >
       Tech Talk
       </GradientText> },
@@ -45,7 +45,7 @@ export default function Event() {
       colors={["#40c9ff", "#e81cff", "#40c9ff", "#e81cff", "#40c9ff"]}
       animationSpeed={3}
       showBorder={true}
-      className="p-4 text-5xl"
+      className="p-2 md:p-4 text-2xl md:text-5xl"
       >
       Company Visits
       </GradientText> },
@@ -54,7 +54,7 @@ export default function Event() {
       colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
       animationSpeed={3}
       showBorder={true}
-      className="p-4 text-5xl"
+      className="p-2 md:p-4 text-2xl md:text-5xl"
       >
       Hands-on Workshop
       </GradientText> },
@@ -63,7 +63,7 @@ export default function Event() {
         colors={["#84ffc9", "#aab2ff", "#eca0ff", "#84ffc9", "#aab2ff","#84ffc9"]}
         animationSpeed={3}
         showBorder={true}
-        className="p-4 text-5xl"
+        className="p-2 md:p-4 text-2xl md:text-5xl"
         >
         Tech Series
         </GradientText> },
@@ -71,15 +71,15 @@ export default function Event() {
 
   return (
     <section
-      id="schedule"
-      className="mx-auto max-w-5xl px-4 py-48 text-white"
+      id="event"
+      className="mx-auto max-w-5xl px-4 py-24 md:py-48 text-white"
     >
-      <p>What We Do</p>
+      <p className="heading-style-1">What We Do</p>
       <motion.h1
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
-        className="my-5 text-4xl font-black uppercase text-zinc-50"
+        className="heading-style-2"
       >
         Events
       </motion.h1>
@@ -88,7 +88,7 @@ export default function Event() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
       >
-        <p className="text-lg">
+        <p className="text-sm sm:text-base md:text-lg ">
         At STC, we bridge the gap between tech education, the tech industry, and technopreneurship 
         by hosting events like 
         <span className="italic font-bold"> Tech Talks,</span>
@@ -100,7 +100,7 @@ export default function Event() {
         with like-minded individuals. Whether you&apos;re a beginner or an aspiring technopreneur, 
         STC is your platform to grow, innovate, and thrive in the tech world!
         </p>
-        <div className="">
+        <div className="mt-8 md:mt-12">
           <InfiniteScroll
             items={scrollItems}
             width="100%"
@@ -126,8 +126,8 @@ export default function Event() {
               className=""
             >
               <HiSparkles className="text-4xl  mb-4" />
-              <h3 className={`${dmSans.className} text-2xl font-bold mb-2`}>Checkout & Join Our Latest Events</h3>
-              <p className="text-gray-300 mb-6">
+              <h3 className={`${dmSans.className}  text-xl md:text-2xl font-bold mb-2`}>Checkout & Join Our Latest Events</h3>
+              <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg">
               Never miss an event! Subscribe to our Luma calendar and get notified about upcoming activities, workshops, and gatherings. Easily register with just one click!
               </p>
               <Button
@@ -152,8 +152,8 @@ export default function Event() {
               className=""
             >
               <FaInstagram className="text-4xl mb-4" />
-              <h3 className={`${dmSans.className} text-2xl font-bold mb-2`}>Follow Us On Instagram</h3>
-              <p className="text-gray-300 mb-6">
+              <h3 className={`${dmSans.className} text-xl md:text-2xl font-bold mb-2`}>Follow Us On Instagram</h3>
+              <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg">
                 Check out event highlights, behind-the-scenes moments, and upcoming activities on our Instagram. Follow us to stay connected!
               </p>
               <Button

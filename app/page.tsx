@@ -1,19 +1,17 @@
 "use client";
 
 import { motion, useMotionTemplate, useScroll, useTransform } from "framer-motion";
-import { FiArrowRight, FiMapPin } from "react-icons/fi";
-import { useRef } from "react";
-import GradientText from "@/GradientText/GradientText";
 import Event from "@/components/Event";
 import AboutUs from "@/components/AboutUs";
 import Join from "@/components/Join";
 import PastEvent from "@/components/PastEvent";
 import Collab from "@/components/Collab";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="bg-zinc-950">
-      <Nav />
+    <div className="bg-black">
+      <Navbar />
       <Hero />
       <AboutUs />
       <Event />
@@ -24,23 +22,7 @@ export default function Home() {
   );
 }
 
-const Nav = () => {
-  return (
-    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-3 text-white">
-      <span className="text-3xl font-bold">STC</span>
-      <button
-        onClick={() => {
-          document.getElementById("schedule")?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
-        className="flex items-center gap-1 text-xs text-zinc-400"
-      >
-        VIEW SCHEDULE <FiArrowRight />
-      </button>
-    </nav>
-  );
-};
+
 
 const SECTION_HEIGHT = 1500;
 

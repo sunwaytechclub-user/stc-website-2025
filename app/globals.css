@@ -252,3 +252,10 @@ body {
   }
 }
 
+.heading-style-1 {
+  @apply text-sm sm:text-base font-medium ;
+}
+
+.heading-style-2 {
+  @apply my-3 sm:my-5 text-2xl sm:text-3xl md:text-4xl font-black uppercase text-zinc-50;
+}
