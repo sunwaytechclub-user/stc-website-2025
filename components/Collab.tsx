@@ -3,18 +3,18 @@ import ShinyText from "@/src/blocks/TextAnimations/ShinyText/ShinyText";
 import LogoWall from "./bits/LogoWall/LogoWall";
 
 const logoImgs = [
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/moneylion-logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/paynet_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/deloitte_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/cimb_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/embeddedllm_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/ethkl_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/dd_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/futurelab_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/aws_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/gdgkl_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/Sas_logo.png", altText: "React Bits Logo" },
-  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/Mdec_logo.png", altText: "React Bits Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/moneylion-logo.png", altText: "MoneyLion Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/paynet_logo.png", altText: "PayNet Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/deloitte_logo.png", altText: "Deloitte Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/cimb_logo.png", altText: "Cimb Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/embeddedllm_logo.png", altText: "EmbeddedLLM Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/ethkl_logo.png", altText: "EthKL Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/dd_logo.png", altText: " Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/futurelab_logo.png", altText: "Future Lab Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/aws_logo.png", altText: "AWS Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/gdgkl_logo.png", altText: "GDGKL Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/Sas_logo.png", altText: "Sas Logo" },
+  { imgUrl: "https://sunwaytechclub.s3.ap-southeast-1.amazonaws.com/Mdec_logo.png", altText: "Mdec Logo" },
 ];
 
 export default function Join() {
