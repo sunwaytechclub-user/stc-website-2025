@@ -68,6 +68,9 @@ const FallingText: React.FC<FallingTextProps> = ({
 
         if (!containerRef.current || !canvasContainerRef.current || !textRef.current) return;
 
+        // Store ref value in a variable
+        const canvasContainer = canvasContainerRef.current;
+
         const containerRect = containerRef.current.getBoundingClientRect();
         const width = containerRect.width;
         const height = containerRect.height;
@@ -168,8 +171,8 @@ const FallingText: React.FC<FallingTextProps> = ({
         return () => {
             Render.stop(render);
             Runner.stop(runner);
-            if (render.canvas && canvasContainerRef.current) {
-                canvasContainerRef.current.removeChild(render.canvas);
+            if (render.canvas && canvasContainer) {
+                canvasContainer.removeChild(render.canvas);
             }
             World.clear(engine.world, false);
             Engine.clear(engine);

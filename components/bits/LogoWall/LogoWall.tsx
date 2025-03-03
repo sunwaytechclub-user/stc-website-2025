@@ -1,5 +1,6 @@
 import React, { useState, FC } from "react";
 import "./LogoWall.css";
+import Image from "next/image";
 
 interface LogoItem {
   imgUrl: string;
@@ -67,12 +68,12 @@ const LogoWall: FC<LogoWallProps> = ({
       >
         <div className="marquee__group">
           {items.map((item, idx) => (
-            <img key={idx} src={item.imgUrl} alt={item.altText} />
+            <Image key={idx} src={item.imgUrl} alt={item.altText} />
           ))}
         </div>
         <div className="marquee__group" aria-hidden="true">
           {items.map((item, idx) => (
-            <img key={`dup1-${idx}`} src={item.imgUrl} alt={item.altText} />
+            <Image key={`dup1-${idx}`} src={item.imgUrl} alt={item.altText} />
           ))}
         </div>
       </div>
@@ -84,12 +85,12 @@ const LogoWall: FC<LogoWallProps> = ({
       >
         <div className="marquee__group">
           {offsetItems.map((item, idx) => (
-            <img key={`rev-${idx}`} src={item.imgUrl} alt={item.altText} />
+            <Image key={`rev-${idx}`} src={item.imgUrl} alt={item.altText} />
           ))}
         </div>
         <div className="marquee__group" aria-hidden="true">
           {offsetItems.map((item, idx) => (
-            <img key={`dup2-${idx}`} src={item.imgUrl} alt={item.altText} />
+            <Image key={`dup2-${idx}`} src={item.imgUrl} alt={item.altText} />
           ))}
         </div>
       </div>

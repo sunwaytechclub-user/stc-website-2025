@@ -1,11 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { useEffect, useRef } from 'react'
-
 export default function Hero() {
-  const containerRef = useRef(null)
 
   const textVariants = {
     hidden: { opacity: 0, y: 20 },

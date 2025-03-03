@@ -2,12 +2,6 @@ import React, { useRef, useEffect, ReactNode } from "react";
 import { gsap } from "gsap";
 import { Observer } from "gsap/Observer";
 
-// Add type for Observer change event
-type ObserverChangeEvent = {
-  deltaY: number;
-  isDragging: boolean;
-  event: Event;
-};
 
 gsap.registerPlugin(Observer);
 
@@ -77,7 +71,18 @@ const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
       gsap.set(child, { y });
     });
 
-    let observer: Observer | null = null;
+    const observer = Observer.create({
+      target: container,
+      type: "wheel,touch,pointer",
+      onChangeY: (self) => {
+        gsap.to(divItems, {
+          y: `+=${self.deltaY}`,
+          modifiers: {
+            y: gsap.utils.unitize(wrapFn),
+          },
+        });
+      },
+    });
     
     // Only prevent wheel events from propagating if interactive
     const preventWheel = (e: WheelEvent) => {
@@ -126,7 +131,7 @@ const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
       } else {
         return () => {
           if (observer) observer.kill();
-          rafId && cancelAnimationFrame(rafId);
+          if (rafId) cancelAnimationFrame(rafId);
           container.removeEventListener('wheel', preventWheel);
         };
       }

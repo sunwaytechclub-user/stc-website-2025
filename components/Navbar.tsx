@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import { CaretDownIcon } from "@radix-ui/react-icons"
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const menuItems = [
   {

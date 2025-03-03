@@ -6,7 +6,6 @@ import {
   ReactNode,
   useEffect,
   useRef,
-  useState,
 } from "react";
 
 import { cn } from "@/lib/utils";
@@ -23,7 +22,7 @@ interface NeonGradientCardProps {
   borderSize?: number;
   borderRadius?: number;
   neonColors?: NeonColorsProps;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
@@ -38,12 +37,10 @@ export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
   ...props
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
-
   useEffect(() => {
     const updateHeight = () => {
       if (containerRef.current) {
-        setHeight(containerRef.current.scrollHeight);
+        containerRef.current.style.height = `${containerRef.current.scrollHeight}px`;
       }
     };
 
@@ -57,7 +54,7 @@ export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
 
   useEffect(() => {
     if (containerRef.current) {
-      setHeight(containerRef.current.scrollHeight);
+      containerRef.current.style.height = `${containerRef.current.scrollHeight}px`;
     }
   }, [children]);
 
