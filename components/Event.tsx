@@ -161,7 +161,7 @@ export default function Event() {
                 onClick={handleButtonClick}
                 asChild
               >
-                <a href="https://lu.ma/sunwaytechclub" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/sunwaytechclub/?hl=en" target="_blank" rel="noopener noreferrer">
                   STC Instagram <FaArrowRightLong className="inline-block " />
                 </a>
               </Button>
