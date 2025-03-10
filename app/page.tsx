@@ -42,15 +42,17 @@ const Hero = () => {
 const CenterImage = () => {
   const { scrollY } = useScroll();
 
-  const clip1 = useTransform(scrollY, [0, 1500], [30, 0]);
-  const clip2 = useTransform(scrollY, [0, 1500], [70, 100]);
-
+  // Clip path animation - image expands from center outward
+  // Smaller initial window (40% of viewport)
+  const clip1 = useTransform(scrollY, [0, 1500], [30, 0]); 
+  const clip2 = useTransform(scrollY, [0, 1500], [80, 100]);  
   const clipPath = useMotionTemplate`polygon(${clip1}% ${clip1}%, ${clip2}% ${clip1}%, ${clip2}% ${clip2}%, ${clip1}% ${clip2}%)`;
 
+  // Image scaling and fade effects
   const backgroundSize = useTransform(
     scrollY,
     [0, SECTION_HEIGHT + 500],
-    ["170%", "100%"]
+    ["200%", "100%"]  // Changed from 170% to 200% for more dramatic initial zoom
   );
   const opacity = useTransform(
     scrollY,
@@ -65,8 +67,7 @@ const CenterImage = () => {
         clipPath,
         backgroundSize,
         opacity,
-        backgroundImage:
-          "url(/images/Hero.png)",
+        backgroundImage: "url(/images/Hero.png)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
