@@ -34,7 +34,7 @@ export default function Schedule() {
           transition={{ ease: "easeInOut", duration: 0.75 }}
         >
           <p className="text-sm sm:text-base md:text-lg ">
-            STC is a club with a vision to Bridge the gap between tech education, tech industry, and technopreneurship. This is done through many events, activities and workshops catered to all members of the club. STC is also a place for you to build connections and network with like minded people who want to achieve the same things as you do.
+          STC is a dynamic tech community dedicated to bridging the gap between tech education, the tech industry, and technopreneurship. Our primary focus is on empowering Sunway students through engaging events, hands-on workshops, and industry-driven activities that equip them with real-world skills. STC is more than just a club — it&apos;s a thriving network of like-minded individuals who share a passion for technology and innovation. Whether you&apos;re looking to upskill, explore career opportunities, or connect with fellow tech enthusiasts, STC provides the platform to help you grow and achieve your goals.
           </p>
         </motion.div>
         <div className="flex justify-center">

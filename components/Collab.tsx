@@ -28,7 +28,7 @@ export default function Join() {
         transition={{ ease: "easeInOut", duration: 0.75, delay: 0.2 }}
         className="heading-style-2"
       >
-        Collaboration drive innovation!
+        Collaboration drives innovation!
       </motion.h1>
       <motion.div
         initial={{ y: 48, opacity: 0 }}

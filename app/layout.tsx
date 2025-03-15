@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "STC Official Page",
+  title: "Sunway Tech Club | STC",
   description: "Sunway Tech Club Official Page",
   icons:{
     icon:"favicon.png"

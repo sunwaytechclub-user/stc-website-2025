@@ -89,16 +89,14 @@ export default function Event() {
         transition={{ ease: "easeInOut", duration: 0.75 }}
       >
         <p className="text-sm sm:text-base md:text-lg ">
-        At STC, we bridge the gap between tech education, the tech industry, and technopreneurship 
-        by hosting events like 
-        <span className="italic font-bold"> Tech Talks,</span>
-        <span className="italic font-bold"> Career Talks</span>
-        <span className="italic font-bold"> Company Visit,</span>
-        <span className="italic font-bold"> Hands-on Workshops </span> and
-        <span className="italic font-bold"> Tech Series. </span>
-        These activities are designed to help you learn new skills, gain industry insights, and connect 
-        with like-minded individuals. Whether you&apos;re a beginner or an aspiring technopreneur, 
-        STC is your platform to grow, innovate, and thrive in the tech world!
+        At STC, we create opportunities for Sunway students to explore and grow in the tech ecosystem. 
+        We host a variety of events, including <span className="italic font-bold">Tech Talks</span>, where industry experts share insights on the latest trends; 
+        <span className="italic font-bold"> Career Talks</span>, which provide guidance on landing jobs and internships;  
+        <span className="italic font-bold"> Company Visits</span>, offering firsthand exposure to 
+        real-world tech environments; <span className="italic font-bold"> Hands-on Workshops</span>, 
+        where you can develop practical skills; and our <span className="italic font-bold">Tech Series</span>, 
+        deep dives into emerging technologies. Whether you&apos;re just starting out or looking to build your own tech venture, 
+        STC is here to support your journey, helping you learn, connect, and thrive!
         </p>
         <div className="mt-8 md:mt-12">
           <InfiniteScroll
@@ -126,9 +124,9 @@ export default function Event() {
               className=""
             >
               <HiSparkles className="text-4xl  mb-4" />
-              <h3 className={`${dmSans.className}  text-xl md:text-2xl font-bold mb-2`}>Checkout & Join Our Latest Events</h3>
+              <h3 className={`${dmSans.className}  text-xl md:text-2xl font-bold mb-2`}>Check Out & Join Our Latest Events</h3>
               <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg">
-              Never miss an event! Subscribe to our Luma calendar and get notified about upcoming activities, workshops, and gatherings. Easily register with just one click!
+              Never miss an event! Subscribe to our Luma calendar to receive notifications about upcoming activities, workshops, and gatherings. Register easily with just one click!
               </p>
               <Button
                 className="relative z-10 bg-[#43433f] hover:opacity-90 transition-opacity px-8 py-2  font-semibold"
@@ -154,7 +152,7 @@ export default function Event() {
               <FaInstagram className="text-4xl mb-4" />
               <h3 className={`${dmSans.className} text-xl md:text-2xl font-bold mb-2`}>Follow Us On Instagram</h3>
               <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg">
-                Check out event highlights, behind-the-scenes moments, and upcoming activities on our Instagram. Follow us to stay connected!
+              Check out event highlights and stay updated on upcoming activities through our Instagram. Follow us to stay connected and never miss out!
               </p>
               <Button
                 className="relative z-10 bg-[#43433f] hover:opacity-90 transition-opacity px-8 py-2  font-semibold"
