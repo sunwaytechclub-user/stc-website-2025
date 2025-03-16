@@ -33,8 +33,15 @@ export default function Schedule() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 0.75 }}
         >
-          <p className="text-sm sm:text-base md:text-lg ">
-          STC is a dynamic tech community dedicated to bridging the gap between tech education, the tech industry, and technopreneurship. Our primary focus is on empowering Sunway students through engaging events, hands-on workshops, and industry-driven activities that equip them with real-world skills. STC is more than just a club — it&apos;s a thriving network of like-minded individuals who share a passion for technology and innovation. Whether you&apos;re looking to upskill, explore career opportunities, or connect with fellow tech enthusiasts, STC provides the platform to help you grow and achieve your goals.
+          <p className="text-sm sm:text-base md:text-lg text-justify">
+          <span className="italic font-semibold">STC (Sunway Tech Club)</span> is a dynamic tech community dedicated to 
+          <span className="font-bold"><a className="underline underline-offset-4 decoration-[#1cb37b] decoration-wavy"> bridging the gap</a> between <a className="underline underline-offset-4 decoration-[#3ab3cc] decoration-dashed decoration-4">tech education, the tech industry,</a> and <a className="underline underline-offset-4 decoration-[#43539b] decoration-double decoration-4">technopreneurship</a>
+          </span>. 
+          Our primary focus is on empowering Sunway students through engaging events, hands-on workshops, and 
+          industry-driven activities that equip them with real-world skills. STC is more than just a club — it&apos;s a 
+          thriving network of like-minded individuals who share a passion for technology and innovation. Whether you&apos;re 
+          looking to upskill, explore career opportunities, or connect with fellow tech enthusiasts, STC provides the platform to 
+          help you grow and achieve your goals.
           </p>
         </motion.div>
         <div className="flex justify-center">

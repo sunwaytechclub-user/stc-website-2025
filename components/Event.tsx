@@ -128,7 +128,7 @@ export default function Event() {
                 <h3 className={`${dmSans.className}  text-xl md:text-2xl font-bold mb-2`}>Check Out & Join Our Latest Events</h3>
               </div>
               
-              <div className="flex-1 flex items-center p-2">
+              <div className="flex-1 flex items-center ">
                 <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg flex-1">
                 Never miss an event! Subscribe to our Luma calendar to receive notifications about upcoming activities, workshops, and gatherings. Register easily with just one click!
                 </p>
@@ -161,7 +161,7 @@ export default function Event() {
                 <h3 className={`${dmSans.className} text-xl md:text-2xl font-bold mb-2`}>Follow Us On Instagram</h3>
               </div>
               
-              <div className="flex-1 flex items-center p-2">
+              <div className="flex-1 flex items-center">
                 <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg ">
                 Check out event highlights and stay updated on upcoming activities through our Instagram. Follow us to stay connected and never miss out!
                 </p>
