@@ -1,5 +1,6 @@
 'use client'
 import { motion, useMotionTemplate, useScroll, useTransform } from "framer-motion";
+import { FaAngleDoubleDown } from "react-icons/fa";
 
 export default function Hero() {
   const SECTION_HEIGHT = 1500;
@@ -35,8 +36,8 @@ export default function Hero() {
           }
         }}
       >
-        <span>Scroll Down</span>
-        <span className="text-3xl">↓</span>
+        <span className="font-bold">Scroll Down</span>
+        <span className="text-3xl"><FaAngleDoubleDown/></span>
       </motion.div>
 
       {/* Hero Image (sticky, always on screen) */}
