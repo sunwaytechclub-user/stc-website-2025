@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
@@ -44,8 +45,14 @@ export default function Navbar() {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/80 backdrop-blur-sm text-white">
-      {/* Logo */}
-      <span className="text-3xl font-bold">STC</span>
+      
+      <Image 
+        src="/images/banner.png" 
+        alt="Banner" 
+        width={100} 
+        height={100} 
+        className="w-[30%] sm:w-[20%] md:w-[15%] lg:w-[10%]" 
+      />
 
       {/* Desktop Navigation Menu */}
       <NavigationMenu.Root dir="ltr" className="hidden md:flex relative">
