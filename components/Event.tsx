@@ -116,20 +116,26 @@ export default function Event() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
       <SpotlightCard className="bg-[#282824] p-6 rounded-lg shadow-lg shadow shadow-[#54544e]" spotlightColor="rgba(110, 109, 104, 0.48)">
-          <div className="flex flex-col h-full justify-center items-start" onClick={(e) => e.stopPropagation()}>
+          <div className="flex flex-col h-full  items-start" onClick={(e) => e.stopPropagation()}>
             <motion.div
               initial={{ y: 48, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.75 }}
-              className=""
+              className="flex flex-col h-full"
             >
-              <HiSparkles className="text-4xl  mb-4" />
-              <h3 className={`${dmSans.className}  text-xl md:text-2xl font-bold mb-2`}>Check Out & Join Our Latest Events</h3>
-              <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg">
-              Never miss an event! Subscribe to our Luma calendar to receive notifications about upcoming activities, workshops, and gatherings. Register easily with just one click!
-              </p>
-              <Button
-                className="relative z-10 bg-[#43433f] hover:opacity-90 transition-opacity px-8 py-2  font-semibold"
+              <div className=" items-center gap-2">
+                <HiSparkles className="text-4xl  mb-4" />
+                <h3 className={`${dmSans.className}  text-xl md:text-2xl font-bold mb-2`}>Check Out & Join Our Latest Events</h3>
+              </div>
+              
+              <div className="flex-1 flex items-center p-2">
+                <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg flex-1">
+                Never miss an event! Subscribe to our Luma calendar to receive notifications about upcoming activities, workshops, and gatherings. Register easily with just one click!
+                </p>
+              </div>
+              <div>
+                <Button
+                className="mt-2 relative z-10 bg-[#43433f] hover:opacity-90 transition-opacity px-8 py-2  font-semibold"
                 onClick={handleButtonClick}
                 asChild
               >
@@ -137,25 +143,32 @@ export default function Event() {
                   STC Luma Calendar <FaArrowRightLong className="inline-block " />
                 </a>
               </Button>
+              </div>
             </motion.div>
           </div>
         </SpotlightCard>
         
         <SpotlightCard className="bg-[#282824] p-6 rounded-lg shadow-lg shadow shadow-[#54544e]" spotlightColor="rgba(110, 109, 104, 0.48)">
-          <div className="flex flex-col h-full justify-center items-start" onClick={(e) => e.stopPropagation()}>
+          <div className="flex flex-col h-full  items-start" onClick={(e) => e.stopPropagation()}>
             <motion.div
               initial={{ y: 48, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.75 }}
-              className=""
+              className="flex flex-col h-full"
             >
-              <FaInstagram className="text-4xl mb-4" />
-              <h3 className={`${dmSans.className} text-xl md:text-2xl font-bold mb-2`}>Follow Us On Instagram</h3>
-              <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg">
-              Check out event highlights and stay updated on upcoming activities through our Instagram. Follow us to stay connected and never miss out!
-              </p>
-              <Button
-                className="relative z-10 bg-[#43433f] hover:opacity-90 transition-opacity px-8 py-2  font-semibold"
+              <div className="items-center gap-2">
+                <FaInstagram className="text-4xl mb-4" />
+                <h3 className={`${dmSans.className} text-xl md:text-2xl font-bold mb-2`}>Follow Us On Instagram</h3>
+              </div>
+              
+              <div className="flex-1 flex items-center p-2">
+                <p className="text-gray-300 mb-6 text-sm sm:text-base md:text-lg ">
+                Check out event highlights and stay updated on upcoming activities through our Instagram. Follow us to stay connected and never miss out!
+                </p>
+              </div>
+              <div>
+                <Button
+                className="mt-2 relative z-10 bg-[#43433f] hover:opacity-90 transition-opacity px-8 py-2  font-semibold"
                 onClick={handleButtonClick}
                 asChild
               >
@@ -163,6 +176,8 @@ export default function Event() {
                   STC Instagram <FaArrowRightLong className="inline-block " />
                 </a>
               </Button>
+              </div>
+              
             </motion.div>
           </div>
         </SpotlightCard>
