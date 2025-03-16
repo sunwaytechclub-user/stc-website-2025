@@ -45,7 +45,6 @@ export default function Navbar() {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/80 backdrop-blur-sm text-white">
-      
       <Image 
         src="/images/banner.png" 
         alt="Banner" 
@@ -55,29 +54,19 @@ export default function Navbar() {
       />
 
       {/* Desktop Navigation Menu */}
-      <NavigationMenu.Root dir="ltr" className="hidden md:flex relative">
-        <NavigationMenu.List className="flex space-x-6">
-          <NavigationMenu.Item>
-            <NavigationMenu.Trigger className="ml-[150px] flex items-center space-x-1 px-3 py-2 text-white hover:text-gray-300">
-              <span><Menu/></span>
-              <CaretDownIcon className="w-4 h-4" />
-            </NavigationMenu.Trigger>
-            <NavigationMenu.Content className="absolute left-0 mt-2 w-48 rounded-md bg-white shadow-lg">
-              <ul className="p-2 text-black">
-                {menuItems.map((item) => (
-                  <li key={item.href} className="hover:bg-gray-100 rounded-md">
-                    <Link 
-                      href={item.href} 
-                      className="block px-4 py-2"
-                      onClick={(e) => handleScroll(e, item.href)}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </NavigationMenu.Content>
-          </NavigationMenu.Item>
+      <NavigationMenu.Root dir="ltr" className="hidden md:flex">
+        <NavigationMenu.List className="flex md:space-x-4 lg:space-x-8">
+          {menuItems.map((item) => (
+            <NavigationMenu.Item key={item.href}>
+              <Link 
+                href={item.href} 
+                className="px-2 lg:px-3 py-2 text-white hover:text-gray-300 transition-colors text-sm lg:text-base whitespace-nowrap"
+                onClick={(e) => handleScroll(e, item.href)}
+              >
+                {item.title}
+              </Link>
+            </NavigationMenu.Item>
+          ))}
         </NavigationMenu.List>
       </NavigationMenu.Root>
 
