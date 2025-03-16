@@ -148,9 +148,9 @@ export default function Stepper({
               {currentStep !== 1 && (
                 <button
                   onClick={handleBack}
-                  className={`rounded-full px-4 py-2 transition text-neutral-400 hover:text-white 
-    bg-transparent border border-[#ff007f] shadow-[0_0_8px_#ff007f] 
-    hover:bg-[#ff007f] hover:text-black ${
+                  className={`rounded-full px-4 py-2 transition font-medium text-neutral-400 hover:text-black 
+    bg-transparent border border-[#3ab3cc] shadow-[0_0_8px_#3ab3cc] 
+    hover:bg-[#3ab3cc] hover:text-black ${
                     currentStep === 1
                       ? "pointer-events-none opacity-50 text-neutral-400"
                       : "text-neutral-400 hover:text-neutral-700"
@@ -163,8 +163,8 @@ export default function Stepper({
               {!isLastStep && (
                 <button
                   onClick={handleNext}
-                  className="rounded-full bg-[#00d8ff] py-2 px-4 font-medium text-black transition
-    shadow-[0_0_10px_#00d8ff] hover:bg-[#008fcc] hover:shadow-[0_0_15px_#008fcc]"
+                  className="rounded-full bg-[#25dd99] py-2 px-4 font-medium text-black transition
+    shadow-[0_0_10px_#25dd99] hover:bg-[#1cb37b] hover:shadow-[0_0_15px_#1cb37b]"
                   {...nextButtonProps}
                 >
                   {nextButtonText}

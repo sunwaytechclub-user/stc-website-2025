@@ -44,7 +44,7 @@ export default function Join() {
       <div className="justify-self-center mt-10">
       <ShinyText text="Past Collaborators" disabled={false} speed={5} className='text-2xl sm:text-3xl font-bold md:text-5xl text-white' />
       </div>
-      <div style={{height: '600px', width: '100%', position: 'relative'}}>
+      <div className="h-[250px] md:h-[350px] w-[100%] relative" >
         <LogoWall
           items={logoImgs}
           direction='horizontal'
