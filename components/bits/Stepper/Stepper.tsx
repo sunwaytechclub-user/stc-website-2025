@@ -33,6 +33,7 @@ interface StepperProps extends HTMLAttributes<HTMLDivElement> {
     currentStep: number;
     onStepClick: (clicked: number) => void;
   }) => ReactNode;
+  googleFormUrl?: string;
 }
 
 export default function Stepper({
@@ -50,6 +51,7 @@ export default function Stepper({
   nextButtonText = "Continue",
   disableStepIndicators = false,
   renderStepIndicator,
+  googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSd5C9uNTYzi_QZ7HhN7neDkFFXc7YcVjST8-PHD0Mk4MZVGZA/formResponse",
   ...rest
 }: StepperProps) {
   const [currentStep, setCurrentStep] = useState<number>(initialStep);
@@ -86,7 +88,7 @@ export default function Stepper({
 
   return (
     <div
-      className="flex min-h-full flex-1 flex-col items-center justify-center p-4 sm:aspect-[4/3] md:aspect-[2/1]"
+      className="flex min-h-fit flex-1 flex-col items-center justify-center p-4 sm:aspect-[4/3] md:aspect-[2/1]"
       {...rest}
     >
       <div
@@ -160,11 +162,21 @@ export default function Stepper({
                   {backButtonText}
                 </button>
               )}
-              {!isLastStep && (
+              {isLastStep ? (
+                <a
+                  href={googleFormUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" items-center rounded-full bg-[#25dd99] py-2 px-4 font-medium text-black transition
+                    shadow-[0_0_10px_#25dd99]  hover:scale-[1.1] hover:shadow-[0_0_15px_#1cb37b]"
+                >
+                  Join Us!
+                </a>
+              ) : (
                 <button
                   onClick={handleNext}
                   className="rounded-full bg-[#25dd99] py-2 px-4 font-medium text-black transition
-    shadow-[0_0_10px_#25dd99] hover:bg-[#1cb37b] hover:shadow-[0_0_15px_#1cb37b]"
+    shadow-[0_0_10px_#25dd99]  hover:scale-[1.1] hover:shadow-[0_0_15px_#1cb37b]"
                   {...nextButtonProps}
                 >
                   {nextButtonText}

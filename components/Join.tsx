@@ -52,35 +52,28 @@ export default function Join() {
           className="bg-[#282824] rounded-[20px] p-2 sm:p-4 md:p-6 md:p-8"
         >
           <Step>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Join the Club!</h2>
-            <p className="text-base sm:text-lg text-[#D9DADB] mb-3 sm:mb-4">
-              Be part of our family by signing up as a member. We&apos;re excited to have you on board!
+            <h2 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4">Join the Club!</h2>
+            <p className="text-base sm:text-lg text-[#D9DADB] mb-3 sm:mb-4 text-justify">
+              Be part of our family by signing up as a member. We&apos;re excited to have you on board! Follow these simple steps to complete your membership.
             </p>
           </Step>
           <Step>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Make a One-Time Payment</h2>
-            <p className="text-base sm:text-lg text-[#D9DADB] mb-3 sm:mb-4">
-              Secure your membership with a one-time fee of RM10. Payment details will be provided upon sign-up.
+            <h2 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4">Introduce yourself</h2>
+            <p className="text-base sm:text-lg text-[#D9DADB] mb-3 sm:mb-4 text-justify">
+              Provide your personal information like Name, Email, Imail, Contact Number, Course of Study, etc in the provided Google Form.
             </p>
           </Step>
           <Step>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Send Us Your Details</h2>
-            <p className="text-base sm:text-lg text-[#D9DADB]">
-              Email the following information to{" "}
-              <span className="text-white font-semibold">sunwaytechclub@gmail.com</span>:
-            </p>
-            <ul className="list-disc list-inside text-[#D9DADB] text-sm sm:text-base space-y-1 sm:space-y-2 mb-3 sm:mb-4 mt-2">
-              <li>Name</li>
-              <li>Student ID</li>
-              <li>Imail Address</li>
-              <li>Course Programme</li>
-              <li>Payment Receipt</li>
+            <h2 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4">One-Time Payment for Lifetime Membership</h2>
+            <ul className=" list-disc list-outside ml-4 text-[#D9DADB] text-base sm:text-lg space-y-1 sm:space-y-2 mb-3 sm:mb-4 mt-2">
+              <li>Transfer RM10 (Membership Fees) to the provided account.</li>
+              <li>Upload your payment receipt in the form.</li>
             </ul>
           </Step>
           <Step>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Check Your Inbox</h2>
+            <h2 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4">Check Your Inbox</h2>
             <p className="text-base sm:text-lg text-[#D9DADB] mb-3 sm:mb-4">
-              Hang tight! You will receive a confirmation email once your membership is processed.
+              Hang tight! You will receive a confirmation email and an invitation to our Discord server once your membership is processed.
             </p>
           </Step>
         </Stepper>
